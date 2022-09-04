@@ -74,8 +74,6 @@ const Header = () => {
               src="https://cdn-icons-png.flaticon.com/512/52/52053.png"
               layout="fill"
               objectFit="contain"
-              height={5}
-              width={5}
               alt="logo"
             />
           </div>
@@ -97,8 +95,6 @@ const Header = () => {
               src="https://cdn-icons-png.flaticon.com/512/52/52053.png"
               layout="fill"
               objectFit="contain"
-              height={5}
-              width={5}
               alt="logo"
             />
           </div>

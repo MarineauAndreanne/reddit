@@ -38,7 +38,7 @@ const PostBox = ({ subreddit }: Props) => {
   } = useForm<FormData>()
 
   const onSubmit = handleSubmit(async (formData) => {
-    console.log("form Data:", formData)
+    // console.log("form Data:", formData)
     const notification = toast.loading("Creating new post...")
 
     try {
@@ -56,8 +56,8 @@ const PostBox = ({ subreddit }: Props) => {
 
       if (!subredditExists) {
         //create subreddit
-        console.log("subreddit is new!")
-        console.log(getSubredditListByTopic)
+        // console.log("subreddit is new!")
+        // console.log(getSubredditListByTopic)
 
         const {
           data: { insertSubreddit: newSubreddit },
@@ -67,7 +67,7 @@ const PostBox = ({ subreddit }: Props) => {
           },
         })
 
-        console.log("creating post", formData)
+        // console.log("creating post", formData)
         const image = formData.postImage || ""
 
         const {
@@ -82,12 +82,12 @@ const PostBox = ({ subreddit }: Props) => {
           },
         })
 
-        console.log("new post added", newPost)
+        // console.log("new post added", newPost)
       } else {
         //use existing subreddit
 
-        console.log("using existing subreddit")
-        console.log(getSubredditListByTopic)
+        // console.log("using existing subreddit")
+        // console.log(getSubredditListByTopic)
 
         const image = formData.postImage || ""
 
@@ -102,7 +102,7 @@ const PostBox = ({ subreddit }: Props) => {
             username: session?.user?.name,
           },
         })
-        console.log("new post added", newPost, getSubredditListByTopic)
+        // console.log("new post added", newPost, getSubredditListByTopic)
       }
 
       //after post has been added
