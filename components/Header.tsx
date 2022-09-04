@@ -17,6 +17,7 @@ import {
 } from "@heroicons/react/outline"
 import { signIn, signOut, useSession } from "next-auth/react"
 import Link from "next/link"
+import Logo from "../styles/images/reddit.png"
 
 const Header = () => {
   const { data: session } = useSession()
@@ -25,11 +26,7 @@ const Header = () => {
     <div className="flex bg-white px-4 py-2 shadow-sm sticky top-0 z-50 items-center">
       <div className="relative h-10 w-20 flex-shrink-0 cursor-pointer">
         <Link href="/">
-          <Image
-            objectFit="contain"
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Reddit_logo_new.svg/2560px-Reddit_logo_new.svg.png"
-            layout="fill"
-          />
+          <Image objectFit="contain" src={Logo} layout="fill" />
         </Link>
       </div>
 
